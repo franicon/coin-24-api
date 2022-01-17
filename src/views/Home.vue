@@ -20,6 +20,7 @@
         <div class="col-md-4 col-12 my-2">
           <input type="text" class="form-control" v-model="search" placeholder="search coin">
         </div>
+        <p class="text-center text-light pt-5" v-if="search.indexOf(match) == '' ">No Data(s) Found</p>
     </div>
     
     <div class="card-wrapper my-5">
@@ -51,6 +52,7 @@
         <div class="spinner-border" role="status"></div>
         <div class="mx-3 py-1">Fetching Datas</div>
       </div>
+     
     </div>
     <div class="" v-if="!error && coins.length">
       <nav aria-label="Page navigation example">
